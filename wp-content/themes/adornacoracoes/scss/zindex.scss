@@ -1,0 +1,17 @@
+// Z-index
+
+$z-index: (
+  modal              : 500,
+  navigation-sticky  : 400,
+  social-fixed       : 200,
+  navigation         : 100,
+);
+
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
